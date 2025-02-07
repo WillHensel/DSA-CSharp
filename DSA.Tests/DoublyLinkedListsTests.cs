@@ -121,6 +121,10 @@ public class DoublyDoublyLinkedListTest
         list.Append(1);
         list.Append(3);
         list.Append(1);
+        
+        Assert.That(list.Length, Is.EqualTo(6));
+        
+        list.Remove(50);
 
         Assert.That(list.Length, Is.EqualTo(6));
         
@@ -138,6 +142,7 @@ public class DoublyDoublyLinkedListTest
         list.Remove(1);
 
         Assert.That(list.Length, Is.EqualTo(0));
+
     }
 
     [Test]

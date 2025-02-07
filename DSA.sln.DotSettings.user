@@ -10,5 +10,6 @@
     &lt;TestId&gt;NUnit3x::D3E2AA40-0262-4C51-84F2-F4F3914FAE7E::net8.0::DSA.Test.DoublyDoublyLinkedListTest.TestRemoveAt&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D3E2AA40-0262-4C51-84F2-F4F3914FAE7E::net8.0::DSA.Test.LinkedListTest.TestRemoveMiddle&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D3E2AA40-0262-4C51-84F2-F4F3914FAE7E::net8.0::DSA.Test.LinkedListTest.TestRemoveMiddleOptimal&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D3E2AA40-0262-4C51-84F2-F4F3914FAE7E::net8.0::DSA.Test.BinaryTreeTests.TestGetNodes&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
