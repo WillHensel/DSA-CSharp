@@ -169,6 +169,72 @@ public class LinkedList<T> where T : IComparable
 
         Length--;
     }
+
+    // This method was made as a challenge picked from a newsletter
+    // which is the reason for the differing rules.
+    // This is my solution. The optimal solution is below.
+    public void RemoveMiddle()
+    {
+        // Assume we only have a head node
+        // Assume we don't know the length
+
+        if (Head is null)
+        {
+            return;
+        }
+
+        var curr = Head;
+        var length = 1;
+        while (curr.Next != null)
+        {
+            curr = curr.Next;
+            length++;
+        }
+
+        var middleIdx = length / 2;
+
+        curr = Head;
+        var idx = 0;
+        while (idx != middleIdx - 1)
+        {
+            curr = curr!.Next;
+            idx++;
+        }
+
+        var temp = curr!.Next;
+        curr.Next = curr.Next!.Next;
+        temp!.Next = null;
+
+        // Just to make this method in compliance with the rest of the datastructure
+        Length--;
+    }
+
+    // Solution from the newsletter
+    public void RemoveMiddleOptimal()
+    {
+        var tempHead = new LinkedListNode<T>(Head!.Data);
+        tempHead.Next = Head;
+        
+        var slow = tempHead;
+        var fast = Head!.Next;
+
+        while (fast?.Next is not null)
+        {
+            slow = slow!.Next;
+            fast = fast.Next?.Next;
+        }
+
+        var temp = slow!.Next;
+        
+        slow.Next = slow.Next?.Next;
+
+        if (temp is not null)
+        {
+            temp.Next = null;
+        }
+
+        Length--;
+    }
     
 }
 

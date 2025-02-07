@@ -194,4 +194,62 @@ public class LinkedListTest
         Assert.That(list.Length, Is.EqualTo(3));
         Assert.That(list.Get(0), Is.EqualTo(2));
     }
+
+    [Test]
+    public void TestRemoveMiddle()
+    {
+        var list = new LinkedList<int>();
+        
+        list.Append(1);
+        list.Append(2);
+        list.Append(3);
+        list.Append(4);
+
+        Assert.That(list.Length, Is.EqualTo(4));
+        Assert.That(list.Get(2), Is.EqualTo(3));
+        
+        list.RemoveMiddle();
+
+        Assert.That(list.Length, Is.EqualTo(3));
+        Assert.That(list.Get(2), Is.EqualTo(4));
+
+        list.Append(5);
+        list.Append(6);
+        
+        Assert.That(list.Length, Is.EqualTo(5));
+        
+        list.RemoveMiddle();
+        
+        Assert.That(list.Length, Is.EqualTo(4));
+        Assert.That(list.Get(2), Is.EqualTo(5));
+    }
+    
+    [Test]
+    public void TestRemoveMiddleOptimal()
+    {
+        var list = new LinkedList<int>();
+        
+        list.Append(1);
+        list.Append(2);
+        list.Append(3);
+        list.Append(4);
+
+        Assert.That(list.Length, Is.EqualTo(4));
+        Assert.That(list.Get(2), Is.EqualTo(3));
+        
+        list.RemoveMiddleOptimal();
+
+        Assert.That(list.Length, Is.EqualTo(3));
+        Assert.That(list.Get(2), Is.EqualTo(4));
+
+        list.Append(5);
+        list.Append(6);
+        
+        Assert.That(list.Length, Is.EqualTo(5));
+        
+        list.RemoveMiddleOptimal();
+        
+        Assert.That(list.Length, Is.EqualTo(4));
+        Assert.That(list.Get(2), Is.EqualTo(5));
+    }
 }
